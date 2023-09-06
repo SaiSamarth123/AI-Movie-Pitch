@@ -1,6 +1,10 @@
+import { process } from "/env";
+
 const setupTextarea = document.getElementById("setup-textarea");
 const setupInputContainer = document.getElementById("setup-input-container");
 const movieBossText = document.getElementById("movie-boss-text");
+
+const apiKey = process.env.OPENAI_API_KEY;
 
 document.getElementById("send-btn").addEventListener("click", () => {
   if (setupTextarea.value) {
